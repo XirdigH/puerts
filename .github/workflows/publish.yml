@@ -283,17 +283,17 @@ jobs:
         run: |
           echo "PLUGIN_VERSION=$(cat unity/native_src/Src/Puerts.cpp | grep -Po '(?<=LIB_VERSION\s)(\d+)')" >> $GITHUB_ENV
             
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: Unity_Plugins_V8
           path: V8/Plugins/
           
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: Unity_Plugins_Quickjs
           path: Quickjs/Plugins/
 
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: Unity_Plugins_Nodejs
           path: Nodejs/Plugins/

@@ -24,7 +24,7 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Download artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build_v8.yml
           name: v8_bin_win64
@@ -50,7 +50,7 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Download artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build_quickjs.yml
           #run_id: ${{env.RUNID}}
@@ -79,7 +79,7 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.2
       - name: Download artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build_nodejs.yml
           #run_id: ${{env.RUNID}}
@@ -106,7 +106,7 @@ jobs:
     steps:
 
       - name: Download artifact
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@v6
         with:
           workflow: build_quickjs.yml
           name: qjs_v8_bin
